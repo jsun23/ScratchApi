@@ -7,4 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 item1 = ItemList.create(item_name:'The Itcher', item_description:'Scratch any itch', item_size:['L','M'] ,item_cost:'$32.00')
 item2 = ItemList.create(item_name:'The Blinger', item_description:'Diamonds', item_size:['XL'] ,item_cost:'$322.00')
-item3 = ItemList.create(item_name:'Glitz and Gold', item_description:'Gold handle and fancy emeralds', item_size:['L'] ,item_cost:'$4,343.00')
+item3 = ItemList.create(item_name:'Glitz and Gold', item_description:'Gold handle and fancy emeralds', item_size:['XL','L','M','S'] ,item_cost:'$4,343.00')
