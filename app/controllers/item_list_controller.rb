@@ -23,10 +23,11 @@ class ItemListController < ApplicationController
 
     def update
         @ItemList = ItemList.find(params[:id])
+		@size = params[:item_size].tr('[]','').split(',').map(&:to_s)
         @ItemList.update(
             item_name: params[:item_name],
             item_description: params[:item_description],
-            item_size: params[:item_size],
+            item_size: @size,
 			item_cost: params[:item_cost]
         )
         render json: @ItemList
