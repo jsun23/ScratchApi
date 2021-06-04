@@ -10,10 +10,12 @@ class ItemListController < ApplicationController
     end 
 
     def create
+		@size = params[:item_size].tr('[]','').split(',').map(&:to_s)
+		
         @ItemList = ItemList.create(
             item_name: params[:item_name],
             item_description: params[:item_description],
-            item_size: params[:item_size],
+            item_size: @size,
 			item_cost: params[:item_cost]
         )
         render json: @ItemList
